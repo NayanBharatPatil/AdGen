@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Ad Generator</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1> Business Ad Generator</h1>
+            <p>Create stunning ads for your business in seconds - 100% FREE</p>
+        </header>
+
+        <!-- Form Step -->
+        <div id="formStep" class="form-container">
+            <div class="form-group">
+                <label>Business Name <span class="required">*</span></label>
+                <input type="text" id="businessName" placeholder="e.g., Coffee House" required>
+            </div>
+
+            <div class="form-group">
+                <label>Business Type <span class="required">*</span></label>
+                <input type="text" id="businessType" placeholder="e.g., Caf�, Restaurant, Retail" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phoneNumber" placeholder="+1 (555) 000-0000" required>
+            </div>
+
+            <div class="form-group">
+                <label>Address <span class="required">*</span></label>
+                <input type="text" id="address" placeholder="123 Main St, City, State" required>
+            </div>
+
+            <div class="form-group">
+                <label>Business Logo/Photo</label>
+                <input type="file" id="photoInput" accept="image/*">
+                <img id="photoPreview" class="photo-preview hidden" alt="Preview">
+            </div>
+
+            <div class="form-group">
+                <label>Business Description <span class="required">*</span></label>
+                <textarea id="description" placeholder="Describe your business, unique selling points, etc." rows="5" required></textarea>
+            </div>
+
+            <button class="btn-generate" id="generateBtn"> Generate Ads</button>
+        </div>
+
+        <!-- Preview Step -->
+        <div id="previewStep" class="preview-container hidden">
+            <button class="btn-back" id="backBtn"> Back to Edit</button>
+
+            <div class="ads-grid" id="adsGrid">
+                <!-- Ads will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loadingContainer" class="loading-container hidden">
+            <div class="spinner"></div>
+            <p>Generating your ads... This may take 30-60 seconds</p>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
